@@ -1,0 +1,274 @@
+body { font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif; }
+body { font-family: system-ui, sans-serif; padding: 20px; line-height:1.6; }
+
+#intro {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef5ff;
+    border-radius: 10px;
+}
+
+#part1 {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fffde7;
+    border-radius: 10px;
+}
+
+#part2 {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff0f5;
+    border-radius: 10px;
+}
+
+.tree-wrapper {
+    position: relative;
+    width: 800px;
+}
+
+.tree-image {
+    width: 100%;
+    display: block;
+}
+
+.dropzone-p1-1 {
+    position: absolute;
+    width: 110px;
+    height: 50px;
+    border: 2px dashed rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.dropzone-p1-2 {
+    position: absolute;
+    width: 110px;
+    height: 50px;
+    border: 2px dashed rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.gp-1 { top: 15px;  left: 150px; }
+.gp-2 { top: 15px;  right: 320px; }
+
+.p-1  { top: 130px; left: 260px; }
+.p-2  { top: 130px; right: 200px; }
+
+.s-1  { top: 280px; left: 50px; }
+.s-2  { top: 280px; left: 210px; }
+.s-3  { top: 280px; right: 160px; }
+.s-4  { top: 280px; right: 10px; }
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fcfcfc;
+    min-height: 60px;
+}
+
+.tile-p1-1 {
+    user-select: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: #ffe5c2;
+    border: 1px solid #ccc;
+    cursor: grab;
+    font-size: 16px;
+}
+
+.tile-p1-2 {
+    user-select: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: #ffe5c2;
+    border: 1px solid #ccc;
+    cursor: grab;
+    font-size: 18px;
+}
+
+.dropzone-p1-1.over {
+    outline: 2px solid #888;
+    outline-offset: 2px;
+}
+
+.dropzone-p1-2.over {
+    outline: 2px solid #888;
+    outline-offset: 2px;
+}
+
+.tile-p1-1:active {
+    cursor: grabbing;
+}
+
+.tile-p1-2:active {
+    cursor: grabbing;
+}
+
+.tile-p1-1.dragging {
+    opacity: 0.5;
+}
+
+.tile-p1-2.dragging {
+    opacity: 0.5;
+}
+
+.controls {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subsection {
+    margin-top: 40px;
+}
+
+#schedule {
+    display: block;
+    width: 350px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.schedule-wrapper {
+    position: relative;
+    width: 350px;
+}
+
+.audio {
+    position: absolute;
+    font-size: 15px;
+}
+
+#q1-audio { top: 30px;  left: 80px; }
+#q2-audio { top: 0px;  left: 210px; }
+#q3-audio { top: 70px;  right: 30px; }
+#q4-audio { bottom: 20px;  right: 100px; }
+#q5-audio { top: 100px;  left: 30px; }
+
+.tile-rows {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tiles-p2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fcfcfc;
+}
+
+.tiles-p2 strong {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px; /* optional for spacing */
+}
+
+.tile-p2 {
+    user-select: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: #ffe5c2;
+    border: 1px solid #ccc;
+    cursor: grab;
+    font-size: 16px;
+    max-height: 20px;
+}
+
+/* The grid container */
+.dropzone-p2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* total of spans underneath */
+  gap: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Base style for each slot (optional) */
+.dropzone-p2 .slot {
+  border: 2px dashed rgba(0,0,0,0.2);
+  border-radius: 8px;
+  min-height: 50px;            /* adjust to taste */
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout: 1st, 3rd, 5th are full (span 2); 2nd & 4th are half (span 1) */
+.dropzone-p2 .slot:nth-child(1) { grid-column: span 2; }
+.dropzone-p2 .slot:nth-child(2) { grid-column: span 1; }
+.dropzone-p2 .slot:nth-child(3) { grid-column: span 2; }
+.dropzone-p2 .slot:nth-child(4) { grid-column: span 1; }
+.dropzone-p2 .slot:nth-child(5) { grid-column: span 2; }
+
+.dropzone-p2.over {
+    outline: 2px solid #888;
+    outline-offset: 2px;
+}
+
+.tile-p2:active {
+    cursor: grabbing;
+}
+
+.tile-p2.dragging {
+    opacity: 0.5;
+}
+
+
+/* Layout for Part 2 questions (two columns, last spans full) */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 20px; /* row, column gaps */
+  align-items: start;
+  margin-top: 10px;
+}
+
+/* A question block: label + dropzone + buttons + feedback */
+.qblock {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 0px;
+  background: #fff;          /* optional: card look */
+  border: 1px solid #eee;    /* optional */
+  border-radius: 10px;       /* optional */
+  padding: 10px;             /* optional */
+}
+
+/* Make q5 span both columns */
+.qblock-wide {
+  grid-column: 1 / -1;
+}
+
+/* Small label before the dropzone (e.g., "1)") */
+.qlabel {
+  font-weight: 600;
+  margin-bottom: -4px;
+}
+
+/* Responsive: collapse to 1 column on narrow screens */
+@media (max-width: 800px) {
+  .zones-grid {
+    grid-template-columns: 1fr;
+  }
+}
